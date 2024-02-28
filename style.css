@@ -1,37 +1,43 @@
-body {
-    color: var(--primary);
-    font-size: 16px;
-    font-family: "Work Sans", sans-serif;
-    margin: 0 auto;
-    padding: 0 1rem;
-    background: var(--background);
-    max-width: 1024px;
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    transition: color 0.5s;
-    transition: background 0.5s;
+}
 
+/* Global styles */
+:root {
     --dark-background: #253a52;
     --dark-primary: #FFFFE3;
     --dark-link: #A9FE75;
-
     --light-background: #fffff3;
-    /*--light-background: rgba(168,226,186,.9);*/
-    /*--light-background: #;*/
     --light-primary: #253a52;
     --light-link: #1348da;
-
     --background: var(--light-background);
     --primary: var(--light-primary);
     --link: var(--light-link);
 }
 
-a {
-    color: var(--link);
+body {
+    color: var(--primary);
+    font-size: 16px;
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0 1rem;
+    background: var(--background);
+    max-width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    transition: color 0.5s, background 0.5s;
 }
 
-h1,
-h2,
-h3 {
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+/* Headings */
+h1, h2, h3 {
     font-family: "Sora", sans-serif;
     font-weight: 700;
 }
@@ -48,15 +54,21 @@ h3 {
     font-size: 1.5rem;
 }
 
-/* separator bars */
-nav,
-section {
+/* Separator bars */
+nav, section {
     border-block-end: 1px solid var(--primary);
+}
+
+/* Header styles */
+header {
+    background-color: var(--background);
+    padding: 1rem 0;
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header nav ul {
@@ -66,24 +78,26 @@ header nav ul {
 }
 
 header nav li {
-    display: inline;
     margin-inline-start: 1rem;
     font-family: "Sora", sans-serif;
     font-weight: 700;
+    list-style: none;
 }
 
 header nav li a {
-    text-decoration: none;
     color: var(--primary);
+    text-decoration: none;
 }
 
-/* container for dark-mode toggle */
+/* Dark Mode Toggle */
 header .controls {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    align-items: center;
     padding: 1rem 0;
 }
 
+/* Bio section styles */
 .bio {
     display: flex;
     align-items: center;
@@ -95,7 +109,7 @@ header .controls {
     width: 320px;
     min-width: 320px;
     background: #888;
-    border-radius: 160px;
+    border-radius: 50%;
 }
 
 @media (max-width: 1024px) {
@@ -105,6 +119,7 @@ header .controls {
 
     .bio .profile-img {
         margin-inline-end: 0;
+        margin-block-end: 1rem;
     }
 }
 
@@ -116,6 +131,7 @@ header .controls {
     margin: 1.5rem 0;
 }
 
+/* Button styles */
 a.btn {
     display: inline-flex;
     align-items: center;
@@ -130,41 +146,66 @@ a.btn {
     font-size: 0.875rem;
 }
 
+/* Skills section styles */
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    /*justify-content: space-between;*/
-    padding-block-end: 1rem;
-    /*padding-block-end: 4rem;*/
+    background-color: var(--light-background);
+    padding: 3rem 0;
 }
 
-.skills ul {
+.skills h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-content: center;
     padding: 0;
-    width: 100%;
-    display: flex;
-    /*justify-content: center;*/
-    justify-content: center;
 }
 
-.skills li {
-    display: inline;
-    /*margin: 0 8%;*/
-    margin: 0 2%;
-}
-
-.skills .link-icon {
-    margin-block-start: 0.5rem;
-    background: var(--link);
-    color: var(--background);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1.5rem;
+.skills-list li {
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 1rem;
 }
 
+.skill-icon {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.skill-name {
+    font-size: 1.2rem;
+}
+
+/* Dark Mode Styles for the Skills Section */
+body.dark-mode .skills {
+    background-color: var(--dark-background);
+}
+
+body.dark-mode .skills h2 {
+    color: var(--dark-primary);
+}
+
+body.dark-mode .skills-list li {
+    border: 1px solid var(--dark-primary);
+}
+
+body.dark-mode .skill-icon {
+    color: var(--dark-link);
+}
+
+body.dark-mode .skill-name {
+    color: var(--dark-primary);
+}
+
+/* Project section styles */
 .project {
     padding-block-end: 3rem;
 }
@@ -185,14 +226,38 @@ article h3 {
 
 article a {
     font-weight: 700;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    color: var(--link);
+    text-decoration: none;
 }
 
-article li {
-    margin-block-end: 0.5rem;
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-article .article-img {
+.github-link {
+    background-color: var(--link);
+    color: var(--background);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.demo-link {
+    background-color: var(--primary);
+    color: var(--background);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.article-img {
     width: 512px;
     min-width: 512px;
     margin-inline-start: 4rem;
@@ -203,7 +268,7 @@ article .article-img {
         flex-direction: column;
     }
 
-    article .article-img {
+    .article-img {
         width: 100%;
         min-width: 100%;
         margin-inline-start: 0;
@@ -211,6 +276,7 @@ article .article-img {
     }
 }
 
+/* Footer styles */
 footer {
     padding: 1rem 0;
     text-align: center;
@@ -238,11 +304,7 @@ footer a {
     align-items: center;
 }
 
-footer .copywright {
-    margin: 3rem 0;
-}
-
-footer .link-icon {
+.link-icon {
     margin-block-start: 0.5rem;
     background: var(--link);
     color: var(--background);
@@ -253,4 +315,10 @@ footer .link-icon {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+}
+
+/* Copyright notice */
+.copywright {
+    font-size: 0.875rem;
+    margin-top: 1rem;
 }

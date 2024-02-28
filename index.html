@@ -52,70 +52,81 @@
 
 <section class="skills">
     <h2>Skills</h2>
-    <ul>
+    <ul class="skills-list">
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-html5"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-html5"></i>
+            </span>
+            <span class="skill-name">HTML5</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-css3"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-css3"></i>
+            </span>
+            <span class="skill-name">CSS3</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-js"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-js"></i>
+            </span>
+            <span class="skill-name">JavaScript</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-python"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-python"></i>
+            </span>
+            <span class="skill-name">Python</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-docker"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-docker"></i>
+            </span>
+            <span class="skill-name">Docker</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-react"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-react"></i>
+            </span>
+            <span class="skill-name">React</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-git"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-git"></i>
+            </span>
+            <span class="skill-name">Git</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-npm"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-npm"></i>
+            </span>
+            <span class="skill-name">npm</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-node"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-node"></i>
+            </span>
+            <span class="skill-name">Node.js</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-bootstrap"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-bootstrap"></i>
+            </span>
+            <span class="skill-name">Bootstrap</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-github"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-github"></i>
+            </span>
+            <span class="skill-name">GitHub</span>
         </li>
         <li>
-        <span class="link-icon">
-            <i class="fa-brands fa-chrome"></i>
-        </span>
+            <span class="skill-icon">
+                <i class="fa-brands fa-chrome"></i>
+            </span>
+            <span class="skill-name">Google Chrome DevTools</span>
         </li>
+        <!-- Add more skills here -->
     </ul>
-
-
 </section>
 
 <section class="project">
@@ -123,14 +134,16 @@
     <article>
         <div>
             <h3>Wardrobify</h3>
-            <p>Wardrobify is an application that allows users to key track of their wardrobe.</p>
+            <p>Wardrobify is an application that allows users to keep track of their wardrobe.</p>
             <strong>Sept 2022</strong>
             <ul>
                 <li>Users can view a list of shoes and hats and create new shoes and hats.</li>
-                <li>Developed through Hats, Shoes, and Wardrobe APIs on the backend and through React on the frontend.
-                </li>
+                <li>Developed through Hats, Shoes, and Wardrobe APIs on the backend and through React on the frontend.</li>
             </ul>
-            <a href="https://github.com/vincenthphung/wardrobify">GitHub Repo</a>
+            <div class="project-links">
+                <a class="github-link" href="https://github.com/vincenthphung/wardrobify">GitHub Repo</a>
+                <a class="demo-link" href="#">Live Demo</a>
+            </div>
         </div>
         <img class="article-img" src="./images/wardrobify1.gif"/>
     </article>
@@ -140,85 +153,50 @@
             <p>Developed a full-stack application for managing conferences, locations, presentations, and attendees.</p>
             <strong>Oct 2022</strong>
             <ul>
-                <li>Improved the scalability of the application by implementing a messaging queue for conference
-                    presentation requests.
-                </li>
-                <li>Utilized third-party APIs to enhance the user experience by adding real-time weather data and
-                    location images.
-                </li>
+                <li>Improved the scalability of the application by implementing a messaging queue for conference presentation requests.</li>
+                <li>Utilized third-party APIs to enhance the user experience by adding real-time weather data and location images.</li>
             </ul>
-            <a href="#">GitHub Repo</a>
+            <div class="project-links">
+                <a class="github-link" href="#">GitHub Repo</a>
+                <a class="demo-link" href="#">Live Demo</a>
+            </div>
         </div>
-        <img class="article-img"
-             src="./images/conferencego1.gif"/>
+        <img class="article-img" src="./images/conferencego1.gif"/>
     </article>
     <article>
         <div>
             <h3>Auto Ease</h3>
-            <p>Developed a single page application using React for a dealership management system, integrating
-                servicing, sales, and inventory as microservices.</p>
+            <p>Developed a single page application using React for a dealership management system, integrating servicing, sales, and inventory as microservices.</p>
             <strong>Nov 2022</strong>
-
             <ul>
-                <li>Created a dockerized RESTful API infrastructure for managing throughput for a scaling dealership
-                </li>
-                <li>Built a React component library with modern fetching and state management solutions to direct data
-                    via API calls
-                </li>
+                <li>Created a dockerized RESTful API infrastructure for managing throughput for a scaling dealership.</li>
+                <li>Built a React component library with modern fetching and state management solutions to direct data via API calls.</li>
             </ul>
-            <a href="https://github.com/vincenthphung/auto-ease">GitHub Repo</a>
+            <div class="project-links">
+                <a class="github-link" href="https://github.com/vincenthphung/auto-ease">GitHub Repo</a>
+                <a class="demo-link" href="#">Live Demo</a>
+            </div>
         </div>
-        <img class="article-img"
-             src="./images/carcar1.gif"/>
+        <img class="article-img" src="./images/carcar1.gif"/>
     </article>
     <article>
         <div>
             <h3>Direct Rep</h3>
-            <p>Developed a platform that uses AI to generate personalized letters to elected representatives for US
-                citizens based on specific issues and stances.</p>
+            <p>Developed a platform that uses AI to generate personalized letters to elected representatives for US citizens based on specific issues and stances.</p>
             <strong>Dec 2022</strong>
             <ul>
-                <li>Utilized the Google Civic Information API and OpenAI GPT3 to support the application</li>
-                <li>Successfully deployed the application using Render and Gitlab pages</li>
-                <li>Collaborated with a team of 5 to deliver a full stack product</li>
+                <li>Utilized the Google Civic Information API and OpenAI GPT3 to support the application.</li>
+                <li>Successfully deployed the application using Render and Gitlab pages.</li>
+                <li>Collaborated with a team of 5 to deliver a full stack product.</li>
             </ul>
-            <a href="https://github.com/vincenthphung/direct-rep">GitHub Repo</a>
+            <div class="project-links">
+                <a class="github-link" href="https://github.com/vincenthphung/direct-rep">GitHub Repo</a>
+                <a class="demo-link" href="#">Live Demo</a>
+            </div>
         </div>
         <img class="article-img" src="./images/direct-rep.gif"/>
     </article>
-<!--    <article>-->
-<!--        <div>-->
-<!--            <h3>Text Message Analysis</h3>-->
-<!--            <p>Measuring sentiment in real-world SMS data.</p>-->
-<!--            <strong>Feb 2022</strong>-->
-<!--            <ul>-->
-<!--                <li>Imported large, complex datasets for text preprocessing</li>-->
-<!--                <li>Analyzed data for positive and negative sentiment using Language Parsing, Word Vectorization, and-->
-<!--                    Topic Modeling-->
-<!--                </li>-->
-<!--                <li>Generated visualizations from results</li>-->
-<!--            </ul>-->
-<!--            <a href="#">GitHub Repo</a>-->
-<!--        </div>-->
-<!--        <img class="article-img" src="./images/direct-rep.gif"/>-->
-<!--    </article>-->
-<!--    <article>-->
-<!--        <div>-->
-<!--            <h3>Biodiversity in National Parks</h3>-->
-<!--            <p>Data analysis on the conservation statuses of various endangered species living in national parks.</p>-->
-<!--            <strong>May 2021</strong>-->
-<!--            <ul>-->
-<!--                <li>Analyzed, cleaned, then plotted data using Matplotlib</li>-->
-<!--                <li>Searched for patterns or themes in data</li>-->
-<!--                <li>Used Jupyter Notebook to communicate findings and conservation recommendations</li>-->
-<!--            </ul>-->
-<!--            <a href="#">GitHub Repo</a>-->
-<!--        </div>-->
-<!--        <video class='article-img' controls>-->
-<!--            <source src='https://static-assets.codecademy.com/assets/livestreams/national_coding_week/park.mp4'>-->
-<!--        </video>-->
-<!--    </article>-->
-<!--    </article>-->
+    <!-- Add more projects here -->
 </section>
 
 <footer>
@@ -249,9 +227,21 @@
         </li>
     </ul>
     <p class="copywright">
-        © 2022 Vincent Phung
+        © 2024 Vincent Phung
     </p>
 </footer>
 <script src="script.js"></script>
+<script>
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+
+    darkModeToggle.addEventListener("change", () => {
+        if (darkModeToggle.checked) {
+            body.classList.add("dark-mode");
+        } else {
+            body.classList.remove("dark-mode");
+        }
+    });
+</script>
 </body>
 </html>
